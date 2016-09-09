@@ -20,8 +20,8 @@
     </environments>
     
     <mappers>
-        <!-- 注册userMapper.xml文件， 
-        userMapper.xml位于io.xuda.mapping这个包下，所以resource写成io/xuda/mapping/userMapper.xml-->
-        <mapper resource="io/xuda/mapping/userMapper.xml"/>
+        <!-- 注册Users实体类要映射的 userMapper.xml映射文件， 
+        usersMapper.xml位于io.xuda.mapping这个包下，所以resource写成io/xuda/mapping/usersMapper.xml-->
+        <mapper resource="io/xuda/mapping/usersMapper.xml"/>
     </mappers>
 </configuration>

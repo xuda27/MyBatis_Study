@@ -1,6 +1,6 @@
 package io.xuda.beans;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Users {
 	private int id;
@@ -8,6 +8,7 @@ public class Users {
 	private String password;
 	private String email;
 	private Date birthday;
+	
 	public int getId() {
 		return id;
 	}
@@ -32,8 +33,8 @@ public class Users {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getBirthday() {
-		return birthday.toLocaleString();
+	public Date getBirthday() {
+		return birthday;
 	}
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;

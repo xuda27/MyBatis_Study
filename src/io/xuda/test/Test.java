@@ -23,6 +23,7 @@ public class Test {
 //		SqlSessionFactory sessionFactory =new SqlSessionFactoryBuilder().build(is);
 		Reader reader=null;
 		try {
+			// 读取conf.xml配置文件
 			reader = Resources.getResourceAsReader(resource);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -31,12 +32,12 @@ public class Test {
 		
 		SqlSession session = sessionFactory.openSession();
 		
-		String statement = "io.xuda.mapping.userMapper.getUser";
+		String statement = "io.xuda.mapping.usersMapper.getUsers"; // 映射sql的标识字符串
 		
 		
 		Users user =null;
 		try {
-			user = session.selectOne(statement,2);
+			user = session.selectOne(statement,1);
 		} finally{
 			session.close();
 		}
